@@ -48,16 +48,25 @@ nav a:hover{
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-
+  position: absolute;
+  top: -40px;
   /*Your code here*/
 }
 
 /*Your Code Here*/
 /*Write selector/rule property to position the skip class element*/
 
+.skip a:focus{
+	position: absolute;
+	top: 0;
+}
+
 /*Your Code Here*/
 /*Write selector/rule property to style all elements when in focus*/
 
+*:focus{
+	border: 2px solid black;
+}
 
 nav{
   background-color: #ddd;
@@ -72,11 +81,12 @@ footer{
   text-align: center;
 }
 
-
-
-
 .container{
   /*Your Code Here*/
+    display: grid;    
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 15px;
 }
 
 header{
@@ -89,7 +99,7 @@ header{
 
   /*Your Code Here*/
   /*Set background-image to header.jpg */
- 
+  background-image: url("../images/header.jpg");
 
   grid-column: 1 / -1;  /*Can you explain what this does?*/
   grid-row: 1 / auto;   /*Can you rewrite it?*/
@@ -104,34 +114,36 @@ header p{
 
 .about, .method, .clients, .contact{
   /*Your Code Here*/
-
+	grid-column: 2 / span 1;
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
   /*Your Code Here*/
-
+	grid-column: 1 / -1; 
+	overflow: hidden;
+	max-height: 700px;
 }
 
 .about, .about-image{
    /*Your Code Here*/
-
+	grid-row: 2 / span 1;
 }
 
 .method, .method-image{
    /*Your Code Here*/
-
+	grid-row: 3 / span 1;
 }
 
 
 .clients, .clients-image{
     /*Your Code Here*/
-
+	grid-row: 4 / span 1;
 }
 
 
 .contact, .contact-image{
     /*Your Code Here*/
-
+	grid-row: 5 / span 1;
 }
 
 .text-block{
@@ -139,7 +151,8 @@ background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
   /*Your code here:*/
-
+  text-align:center;
+  vertical-align: middle;
 }
 
 
