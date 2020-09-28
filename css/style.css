@@ -84,6 +84,7 @@ footer{
 .container{
   /*Your Code Here*/
     display: grid;    
+	-webkit-grid-template-columns: 1fr 5fr 1fr;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: repeat(5, auto);
     grid-gap: 15px;
@@ -165,7 +166,8 @@ background-color: rgba(255, 255, 255, .8);
 
   .container{
     /*Your code here:*/
-	display: grid;    
+	display: grid;  
+	-webkit-grid-template-columns: 50px auto 500px auto 50px;
 	grid-template-columns: 50px auto 500px auto 50px;
 	grid-template-rows: repeat(5, 400px);
   }
